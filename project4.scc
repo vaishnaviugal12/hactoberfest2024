@@ -1,0 +1,103 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0f1a33;
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #DDD;
+}
+
+/* Carousel */
+.carousel {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.caption {
+    font-size: 1.5rem;
+    color: #FFF;
+    background-color: rgba(0, 0, 0, 0.6); /* Make the text readable */
+    padding: 10px;
+    position: absolute;
+    bottom: 10%; /* Ensure the caption is at the bottom of the image */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%; /* Keep the text inside the image */
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+/* Controls */
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.controls button {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.controls button:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Cursor */
+.cursor {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform 0.1s ease;
+    transform: scale(1);
+}
+
+button:hover ~ .cursor {
+    transform: scale(1.5);
+}
